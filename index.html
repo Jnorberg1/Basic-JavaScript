@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Basic JavaScript Exercises</title>
+	<style>
+		body { font-family: serif; }
+		.container { border: 2px solid #000; padding: 10px; max-width: 900px; }
+		hr { margin: 18px 0; }
+		button { margin: 6px 6px 6px 0; }
+		.redText { color: red; }
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Basic JavaScript Exercises</h1>
+
+		<p>Current Counter: <span id="counter">0</span></p>
+
+		<hr>
+
+		<h2>1pt: Simple Functions</h2>
+		<p>
+			When the 'increase' button is clicked, increment the counter above.<br>
+			When the 'decrease' button is clicked, decrement the counter above.
+		</p>
+		<button onclick="tickUp()">Increase Counter</button>
+		<button onclick="tickDown()">Decrease Counter</button>
+
+		<hr>
+
+		<h2>1pt: Simple For Loop</h2>
+		<p>
+			When this button is clicked, display in the designated area below
+			every number from 0 up to and including the counter above.
+		</p>
+		<button onclick="runForLoop()">Run For Loop</button>
+		<p>Result: <span id="forLoopResult"></span></p>
+
+		<hr>
+
+		<h2>1pt: Repetition with Condition</h2>
+		<p>
+			When this button is clicked, display in the designated area below
+			all odd numbers from 1 to the counter above.
+		</p>
+		<button onclick="showOddNumbers()">Show Odd Numbers</button>
+		<p>Result: <span id="oddNumberResult"></span></p>
+
+		<hr>
+
+		<h2>1pt: Arrays</h2>
+		<p>
+			When this button is clicked, add every multiple of 5 up to the counter
+			to an array in reverse order. Then print the array to console.<br>
+			<b>NOTE:</b> print the array itself, not the contents of the array.<br>
+			If the number is &lt; 5, then it should print an empty array.
+		</p>
+		<button onclick="addMultiplesToArray()">Array of Reverse Order Multiples of 5</button>
+
+		<hr>
+
+		<h2>2pts: Objects and Form Fields</h2>
+		<p>
+			Car Type <input id="carType" type="text"><br>
+			Car MPG <input id="carMPG" type="text"><br>
+			Car Color <input id="carColor" type="text"><br><br>
+			<button onclick="printCarObject()">Print Car Object</button>
+		</p>
+
+		<hr>
+
+		<h2>2pts: Objects and Form Fields pt. 2</h2>
+		<p>
+			When either of these buttons are clicked,<br>
+			load the data from the car objects <i>found in the footer of this HTML</i><br>
+			into the form above.
+		</p>
+		<button onclick="loadCar(1)">Load Car 1</button>
+		<button onclick="loadCar(2)">Load Car 2</button>
+		<button onclick="loadCar(3)">Load Car 3</button>
+
+		<hr>
+
+		<h2>2pt: Changing Styles</h2>
+		<p id="styleParagraph" class="redText">
+			When either of these buttons are clicked,<br>
+			the text color of this paragraph should change<br>
+			to the color described by the button text.
+		</p>
+		<button onclick="changeColor(1)">Red</button>
+		<button onclick="changeColor(2)">Green</button>
+		<button onclick="changeColor(3)">Blue</button>
+	</div>
+
+
+	<script>
+	
+		const carObject1 = { cType: "truck", cMPG: "28", cColor: "red" };
+		const carObject2 = { cType: "sedan", cMPG: "35", cColor: "blue" };
+		const carObject3 = { cType: "suv",   cMPG: "22", cColor: "green" };
+
+
+		window.carObject1 = carObject1;
+		window.carObject2 = carObject2;
+		window.carObject3 = carObject3;
+	</script>
+
+
+	<script src="script.js" defer></script>
+</body>
+</html>
